@@ -1,10 +1,12 @@
 const express = require('express')
+require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://junslim10:expressdb11@cluster0.zm7zm.mongodb.net/fcb?retryWrites=true&w=majority";
+const uri = process.env.DB_URI;
 const playerRoutes = require('./routes/playerRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 const teamRoutes = require('./routes/teamRoutes');
+const newsRoutes = require('./routes/newsRoutes');
 
 var cors = require('cors')
 app.use(cors());
@@ -24,3 +26,4 @@ app.get('/', (req, res) => {
 app.use('/players', playerRoutes);
 app.use('/matches', matchRoutes);
 app.use('/teams', teamRoutes);
+app.use('/news', newsRoutes);
