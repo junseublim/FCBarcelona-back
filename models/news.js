@@ -22,6 +22,10 @@ const newsSchema = new Schema({
         type: String,
         required: true
     },
+    date: {
+        type: Date,
+        reuried: true
+    }
 
 });
 

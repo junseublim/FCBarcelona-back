@@ -14,6 +14,10 @@ const teamSchema = new Schema({
         type: Number,
         required: true
     },
+    played: {
+        type: Number,
+        required: true
+    },
     win: {
         type: Number,
         required: true

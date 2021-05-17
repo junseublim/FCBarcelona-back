@@ -22,6 +22,14 @@ const matchSchema = new Schema({
         type: String,
         required: true
     },
+    isDone: {
+        type: Boolean,
+        required: true
+    },
+    score: {
+        type: String,
+        required: false
+    }
 
 });
 

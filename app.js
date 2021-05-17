@@ -13,7 +13,7 @@ app.use(cors());
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then((result) => {
     console.log('connected to db');
-    app.listen(5000);
+    app.listen(3001);
 }).catch((err) => {
     console.log(err);
 })
