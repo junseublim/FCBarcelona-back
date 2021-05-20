@@ -7,6 +7,7 @@ const playerRoutes = require('./routes/playerRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 const teamRoutes = require('./routes/teamRoutes');
 const newsRoutes = require('./routes/newsRoutes');
+const transferRoutes = require('./routes/transferRoutes');
 
 var cors = require('cors')
 app.use(cors());
@@ -27,3 +28,4 @@ app.use('/players', playerRoutes);
 app.use('/matches', matchRoutes);
 app.use('/teams', teamRoutes);
 app.use('/news', newsRoutes);
+app.use('/transfers', transferRoutes);
