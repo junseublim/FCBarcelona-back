@@ -2,7 +2,7 @@
 
 스페인의 축구팀 FC Barcelona의 팬페이지 프로젝트
 
-[바르셀로나 펜페이지 링크](fcbarcelona.junseublim.com)
+[바르셀로나 펜페이지 링크](http://fcbarcelona.junseublim.com)
 
 ![스크린샷 2021-05-20 오후 11 20 52](https://user-images.githubusercontent.com/41264717/118995340-07c3d280-b9c2-11eb-86f0-c189ea7b4aa2.png)
 
