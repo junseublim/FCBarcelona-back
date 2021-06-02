@@ -8,9 +8,10 @@ const matchRoutes = require('./routes/matchRoutes');
 const teamRoutes = require('./routes/teamRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 const transferRoutes = require('./routes/transferRoutes');
-
+var cron = require('node-cron');
 var cors = require('cors')
 app.use(cors());
+const getNews = require('./crawlers/getNews');
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then((result) => {
     console.log('connected to db');
@@ -18,6 +19,11 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(
 }).catch((err) => {
     console.log(err);
 })
+
+cron.schedule('* * * * *', () => {
+    getNews();
+    console.log("Crawler activated");
+});
 
 
 

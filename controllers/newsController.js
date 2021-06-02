@@ -1,7 +1,7 @@
 const News = require('../models/news');
 
 const newsList = (req, res) => {
-    News.find()
+    News.find().sort({ 'date': 'asc' })
         .then((result) => {
             return res.json(result)
         })

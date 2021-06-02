@@ -24,7 +24,7 @@ const newsSchema = new Schema({
     },
     date: {
         type: Date,
-        reuried: true
+        required: true
     }
 
 });
