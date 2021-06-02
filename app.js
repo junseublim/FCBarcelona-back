@@ -20,7 +20,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(
     console.log(err);
 })
 
-cron.schedule('* * * * *', () => {
+cron.schedule('* 0 * * * ', () => {
     getNews();
     console.log("Crawler activated");
 });
