@@ -1,5 +1,4 @@
 const Match = require('../models/match');
-const Team = require('../models/team');
 
 const matchList = (req, res) => {
     Match.find()
