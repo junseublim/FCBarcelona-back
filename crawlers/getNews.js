@@ -26,7 +26,7 @@ const getNews = async () => {
         return newsList;
     });
     news.forEach(async (element) => {
-        let n = await News.findOneAndUpdate({ id: element.id }, element, { overwrite: true, new: true, upsert: true });
+        let n = await News.findOneAndUpdate({ id: element.id }, element, { upsert: true });
     });
 };
 
